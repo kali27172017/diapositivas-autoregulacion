@@ -12,172 +12,191 @@
 <body>
     <div id="root"></div>
     
-    <script type="text/babel">  
-        import React, { useState } from 'react';
-        import { ChevronLeft, ChevronRight } from 'lucide-react';
+    <script type="text/babel">
+        const { useState } = React;
 
-        export default function PresentacionAutoregulacion() {
-        const [currentSlide, setCurrentSlide] = useState(0);
+        function ChevronLeft({ size }) {
+            return (
+                <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            );
+        }
 
-        const slides = [
-       {
-      title: "Autorregulación",
-      content: (
-        <div className="text-center space-y-6">
-          <div className="text-6xl">🧠</div>
-          <p className="text-2xl text-gray-700">La capacidad de controlar nuestras emociones, pensamientos y comportamientos</p>
-        </div>
-      )
-    },
-    {
-      title: "¿Qué es?",
-      content: (
-        <div className="space-y-4">
-          <p className="text-xl text-gray-700">Es la habilidad de:</p>
-          <ul className="space-y-3 text-lg text-gray-600">
-            <li className="flex items-start">
-              <span className="text-2xl mr-3">✓</span>
-              <span>Manejar nuestras emociones</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-2xl mr-3">✓</span>
-              <span>Controlar impulsos</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-2xl mr-3">✓</span>
-              <span>Adaptarnos a diferentes situaciones</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-2xl mr-3">✓</span>
-              <span>Alcanzar nuestras metas</span>
-            </li>
-          </ul>
-        </div>
-      )
-    },
-    {
-      title: "Beneficios",
-      content: (
-        <div className="grid grid-cols-2 gap-6">
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <div className="text-4xl mb-3">😌</div>
-            <p className="font-semibold text-lg">Mejor salud emocional</p>
-          </div>
-          <div className="bg-green-50 p-6 rounded-lg">
-            <div className="text-4xl mb-3">🎯</div>
-            <p className="font-semibold text-lg">Logro de objetivos</p>
-          </div>
-          <div className="bg-purple-50 p-6 rounded-lg">
-            <div className="text-4xl mb-3">🤝</div>
-            <p className="font-semibold text-lg">Mejores relaciones</p>
-          </div>
-          <div className="bg-yellow-50 p-6 rounded-lg">
-            <div className="text-4xl mb-3">💪</div>
-            <p className="font-semibold text-lg">Mayor resiliencia</p>
-          </div>
-        </div>
-      )
-    },
-    {
-      title: "Estrategias",
-      content: (
-        <div className="space-y-5">
-          <div className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
-            <span className="text-3xl">🧘</span>
-            <div>
-              <p className="font-semibold text-lg">Respira profundo</p>
-              <p className="text-gray-600">Pausa antes de reaccionar</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
-            <span className="text-3xl">📝</span>
-            <div>
-              <p className="font-semibold text-lg">Identifica tus emociones</p>
-              <p className="text-gray-600">Reconoce lo que sientes</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
-            <span className="text-3xl">🎯</span>
-            <div>
-              <p className="font-semibold text-lg">Establece metas claras</p>
-              <p className="text-gray-600">Divide en pasos pequeños</p>
-            </div>
-          </div>
-        </div>
-      )
-    },
-    {
-      title: "Recuerda",
-      content: (
-        <div className="text-center space-y-8">
-          <div className="text-5xl">🌱</div>
-          <p className="text-2xl text-gray-700 font-medium">La autorregulación se aprende y mejora con la práctica</p>
-          <p className="text-xl text-gray-600">¡Sé paciente contigo mismo!</p>
-        </div>
-      )
-    }
-  ];
+        function ChevronRight({ size }) {
+            return (
+                <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            );
+        }
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+        function PresentacionAutoregulacion() {
+            const [currentSlide, setCurrentSlide] = useState(0);
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+            const slides = [
+                {
+                    title: "Autorregulación",
+                    content: (
+                        <div className="text-center space-y-6">
+                            <div className="text-6xl">🧠</div>
+                            <p className="text-2xl text-gray-700">La capacidad de controlar nuestras emociones, pensamientos y comportamientos</p>
+                        </div>
+                    )
+                },
+                {
+                    title: "¿Qué es?",
+                    content: (
+                        <div className="space-y-4">
+                            <p className="text-xl text-gray-700">Es la habilidad de:</p>
+                            <ul className="space-y-3 text-lg text-gray-600">
+                                <li className="flex items-start">
+                                    <span className="text-2xl mr-3">✓</span>
+                                    <span>Manejar nuestras emociones</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-2xl mr-3">✓</span>
+                                    <span>Controlar impulsos</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-2xl mr-3">✓</span>
+                                    <span>Adaptarnos a diferentes situaciones</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="text-2xl mr-3">✓</span>
+                                    <span>Alcanzar nuestras metas</span>
+                                </li>
+                            </ul>
+                        </div>
+                    )
+                },
+                {
+                    title: "Beneficios",
+                    content: (
+                        <div className="grid grid-cols-2 gap-6">
+                            <div className="bg-blue-50 p-6 rounded-lg">
+                                <div className="text-4xl mb-3">😌</div>
+                                <p className="font-semibold text-lg">Mejor salud emocional</p>
+                            </div>
+                            <div className="bg-green-50 p-6 rounded-lg">
+                                <div className="text-4xl mb-3">🎯</div>
+                                <p className="font-semibold text-lg">Logro de objetivos</p>
+                            </div>
+                            <div className="bg-purple-50 p-6 rounded-lg">
+                                <div className="text-4xl mb-3">🤝</div>
+                                <p className="font-semibold text-lg">Mejores relaciones</p>
+                            </div>
+                            <div className="bg-yellow-50 p-6 rounded-lg">
+                                <div className="text-4xl mb-3">💪</div>
+                                <p className="font-semibold text-lg">Mayor resiliencia</p>
+                            </div>
+                        </div>
+                    )
+                },
+                {
+                    title: "Estrategias",
+                    content: (
+                        <div className="space-y-5">
+                            <div className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
+                                <span className="text-3xl">🧘</span>
+                                <div>
+                                    <p className="font-semibold text-lg">Respira profundo</p>
+                                    <p className="text-gray-600">Pausa antes de reaccionar</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
+                                <span className="text-3xl">📝</span>
+                                <div>
+                                    <p className="font-semibold text-lg">Identifica tus emociones</p>
+                                    <p className="text-gray-600">Reconoce lo que sientes</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
+                                <span className="text-3xl">🎯</span>
+                                <div>
+                                    <p className="font-semibold text-lg">Establece metas claras</p>
+                                    <p className="text-gray-600">Divide en pasos pequeños</p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                },
+                {
+                    title: "Recuerda",
+                    content: (
+                        <div className="text-center space-y-8">
+                            <div className="text-5xl">🌱</div>
+                            <p className="text-2xl text-gray-700 font-medium">La autorregulación se aprende y mejora con la práctica</p>
+                            <p className="text-xl text-gray-600">¡Sé paciente contigo mismo!</p>
+                        </div>
+                    )
+                }
+            ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center p-4">
-      <div className="w-full max-w-4xl">
-        <div className="bg-white rounded-2xl shadow-2xl p-12 min-h-[500px] flex flex-col">
-          <h1 className="text-4xl font-bold text-gray-800 mb-8 border-b-4 border-blue-500 pb-4">
-            {slides[currentSlide].title}
-          </h1>
-          
-          <div className="flex-1 flex items-center justify-center">
-            {slides[currentSlide].content}
-          </div>
+            const nextSlide = () => {
+                setCurrentSlide((prev) => (prev + 1) % slides.length);
+            };
 
-          <div className="flex items-center justify-between mt-8 pt-6 border-t-2 border-gray-200">
-            <button
-              onClick={prevSlide}
-              className="flex items-center space-x-2 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
-              disabled={currentSlide === 0}
-            >
-              <ChevronLeft size={20} />
-              <span>Anterior</span>
-            </button>
+            const prevSlide = () => {
+                setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+            };
 
-            <div className="flex space-x-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition ${
-                    index === currentSlide ? 'bg-blue-500 w-8' : 'bg-gray-300'
-                  }`}
-                />
-              ))}
-            </div>
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center p-4">
+                    <div className="w-full max-w-4xl">
+                        <div className="bg-white rounded-2xl shadow-2xl p-12 min-h-[500px] flex flex-col">
+                            <h1 className="text-4xl font-bold text-gray-800 mb-8 border-b-4 border-blue-500 pb-4">
+                                {slides[currentSlide].title}
+                            </h1>
+                            
+                            <div className="flex-1 flex items-center justify-center">
+                                {slides[currentSlide].content}
+                            </div>
 
-            <button
-              onClick={nextSlide}
-              className="flex items-center space-x-2 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
-              disabled={currentSlide === slides.length - 1}
-            >
-              <span>Siguiente</span>
-              <ChevronRight size={20} />
-            </button>
-          </div>
+                            <div className="flex items-center justify-between mt-8 pt-6 border-t-2 border-gray-200">
+                                <button
+                                    onClick={prevSlide}
+                                    className="flex items-center space-x-2 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
+                                    disabled={currentSlide === 0}
+                                >
+                                    <ChevronLeft size={20} />
+                                    <span>Anterior</span>
+                                </button>
 
-          <p className="text-center text-gray-500 mt-4">
-            Diapositiva {currentSlide + 1} de {slides.length}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
+                                <div className="flex space-x-2">
+                                    {slides.map((_, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setCurrentSlide(index)}
+                                            className={`w-3 h-3 rounded-full transition ${
+                                                index === currentSlide ? 'bg-blue-500 w-8' : 'bg-gray-300'
+                                            }`}
+                                        />
+                                    ))}
+                                </div>
+
+                                <button
+                                    onClick={nextSlide}
+                                    className="flex items-center space-x-2 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
+                                    disabled={currentSlide === slides.length - 1}
+                                >
+                                    <span>Siguiente</span>
+                                    <ChevronRight size={20} />
+                                </button>
+                            </div>
+
+                            <p className="text-center text-gray-500 mt-4">
+                                Diapositiva {currentSlide + 1} de {slides.length}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        // Renderizar la aplicación
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<PresentacionAutoregulacion />);
     </script>
 </body>
 </html>
