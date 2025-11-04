@@ -12,17 +12,15 @@
 <body>
     <div id="root"></div>
     
-    <script type="text/babel">
-        const { useState } = React;
-        
-       import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+    <script type="text/babel">  
+        import React, { useState } from 'react';
+        import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-export default function PresentacionAutoregulacion() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+        export default function PresentacionAutoregulacion() {
+        const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
-    {
+        const slides = [
+       {
       title: "Autorregulación",
       content: (
         <div className="text-center space-y-6">
