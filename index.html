@@ -34,88 +34,140 @@
         function PresentacionAutoregulacion() {
             const [currentSlide, setCurrentSlide] = useState(0);
 
-            const slides = [
+             const slides = [
                 {
-                    title: "Autorregulación",
+                    title: "El Adverbio",
                     content: (
                         <div className="text-center space-y-6">
-                            <div className="text-6xl">🧠</div>
-                            <p className="text-2xl text-gray-700">La capacidad de controlar nuestras emociones, pensamientos y comportamientos</p>
+                            <div className="text-6xl">📝</div>
+                            <p className="text-2xl text-gray-700 font-semibold">Palabra que modifica o complementa</p>
+                            <div className="flex justify-center gap-8 text-xl">
+                                <div className="bg-blue-100 px-6 py-3 rounded-lg">Verbos</div>
+                                <div className="bg-green-100 px-6 py-3 rounded-lg">Adjetivos</div>
+                                <div className="bg-purple-100 px-6 py-3 rounded-lg">Adverbios</div>
+                            </div>
                         </div>
                     )
                 },
                 {
-                    title: "¿Qué es?",
+                    title: "Tipos de Adverbios (1/2)",
                     content: (
                         <div className="space-y-4">
-                            <p className="text-xl text-gray-700">Es la habilidad de:</p>
-                            <ul className="space-y-3 text-lg text-gray-600">
-                                <li className="flex items-start">
-                                    <span className="text-2xl mr-3">✓</span>
-                                    <span>Manejar nuestras emociones</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-2xl mr-3">✓</span>
-                                    <span>Controlar impulsos</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-2xl mr-3">✓</span>
-                                    <span>Adaptarnos a diferentes situaciones</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-2xl mr-3">✓</span>
-                                    <span>Alcanzar nuestras metas</span>
-                                </li>
-                            </ul>
+                            <div className="bg-blue-50 p-4 rounded-lg">
+                                <p className="font-bold text-lg mb-2">🗺️ LUGAR (¿Dónde?)</p>
+                                <p className="text-gray-700">aquí, ahí, allí, cerca, lejos, arriba, abajo</p>
+                                <p className="text-sm text-blue-700 mt-2">Ejemplo: El libro está <strong>arriba</strong></p>
+                            </div>
+                            <div className="bg-green-50 p-4 rounded-lg">
+                                <p className="font-bold text-lg mb-2">⏰ TIEMPO (¿Cuándo?)</p>
+                                <p className="text-gray-700">hoy, ayer, mañana, ahora, siempre, nunca</p>
+                                <p className="text-sm text-green-700 mt-2">Ejemplo: <strong>Ayer</strong> llovió mucho</p>
+                            </div>
+                            <div className="bg-purple-50 p-4 rounded-lg">
+                                <p className="font-bold text-lg mb-2">🎭 MODO (¿Cómo?)</p>
+                                <p className="text-gray-700">bien, mal, rápido + terminados en -MENTE</p>
+                                <p className="text-sm text-purple-700 mt-2">Ejemplo: Habla <strong>claramente</strong></p>
+                            </div>
                         </div>
                     )
                 },
                 {
-                    title: "Beneficios",
+                    title: "Tipos de Adverbios (2/2)",
                     content: (
-                        <div className="grid grid-cols-2 gap-6">
-                            <div className="bg-blue-50 p-6 rounded-lg">
-                                <div className="text-4xl mb-3">😌</div>
-                                <p className="font-semibold text-lg">Mejor salud emocional</p>
+                        <div className="space-y-4">
+                            <div className="bg-yellow-50 p-4 rounded-lg">
+                                <p className="font-bold text-lg mb-2">📊 CANTIDAD (¿Cuánto?)</p>
+                                <p className="text-gray-700">muy, mucho, poco, bastante, demasiado</p>
+                                <p className="text-sm text-yellow-700 mt-2">Ejemplo: Es <strong>muy</strong> inteligente</p>
                             </div>
-                            <div className="bg-green-50 p-6 rounded-lg">
-                                <div className="text-4xl mb-3">🎯</div>
-                                <p className="font-semibold text-lg">Logro de objetivos</p>
+                            <div className="bg-green-50 p-4 rounded-lg">
+                                <p className="font-bold text-lg mb-2">✅ AFIRMACIÓN</p>
+                                <p className="text-gray-700">sí, también, cierto, efectivamente</p>
+                                <p className="text-sm text-green-700 mt-2">Ejemplo: <strong>Sí</strong>, iré a la fiesta</p>
                             </div>
-                            <div className="bg-purple-50 p-6 rounded-lg">
-                                <div className="text-4xl mb-3">🤝</div>
-                                <p className="font-semibold text-lg">Mejores relaciones</p>
+                            <div className="bg-red-50 p-4 rounded-lg">
+                                <p className="font-bold text-lg mb-2">❌ NEGACIÓN</p>
+                                <p className="text-gray-700">no, nunca, jamás, tampoco</p>
+                                <p className="text-sm text-red-700 mt-2">Ejemplo: <strong>No</strong> quiero salir</p>
                             </div>
-                            <div className="bg-yellow-50 p-6 rounded-lg">
-                                <div className="text-4xl mb-3">💪</div>
-                                <p className="font-semibold text-lg">Mayor resiliencia</p>
+                            <div className="bg-orange-50 p-4 rounded-lg">
+                                <p className="font-bold text-lg mb-2">❓ DUDA</p>
+                                <p className="text-gray-700">quizás, tal vez, probablemente</p>
+                                <p className="text-sm text-orange-700 mt-2">Ejemplo: <strong>Quizás</strong> llueva</p>
                             </div>
                         </div>
                     )
                 },
                 {
-                    title: "Estrategias",
+                    title: "¿Qué Modifica?",
+                    content: (
+                        <div className="space-y-6">
+                            <div className="bg-blue-50 p-5 rounded-lg">
+                                <p className="font-bold text-xl mb-2">VERBO</p>
+                                <p className="text-lg">María corre <span className="bg-blue-300 px-2 py-1 rounded">rápidamente</span></p>
+                                <p className="text-sm text-gray-600 mt-1">¿Cómo corre?</p>
+                            </div>
+                            <div className="bg-green-50 p-5 rounded-lg">
+                                <p className="font-bold text-xl mb-2">ADJETIVO</p>
+                                <p className="text-lg">Es <span className="bg-green-300 px-2 py-1 rounded">muy</span> alto</p>
+                                <p className="text-sm text-gray-600 mt-1">Intensifica el adjetivo</p>
+                            </div>
+                            <div className="bg-purple-50 p-5 rounded-lg">
+                                <p className="font-bold text-xl mb-2">OTRO ADVERBIO</p>
+                                <p className="text-lg">Corre <span className="bg-purple-300 px-2 py-1 rounded">muy</span> rápido</p>
+                                <p className="text-sm text-gray-600 mt-1">Modifica a "rápido"</p>
+                            </div>
+                        </div>
+                    )
+                },
+                {
+                    title: "Adverbios en -MENTE",
                     content: (
                         <div className="space-y-5">
-                            <div className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
-                                <span className="text-3xl">🧘</span>
-                                <div>
-                                    <p className="font-semibold text-lg">Respira profundo</p>
-                                    <p className="text-gray-600">Pausa antes de reaccionar</p>
+                            <p className="text-xl text-center font-semibold">Adjetivo femenino + MENTE</p>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-pink-50 p-4 rounded-lg text-center">
+                                    <p className="font-bold">rápida</p>
+                                    <p className="text-2xl my-2">→</p>
+                                    <p className="text-blue-600 font-bold">rápidamente</p>
+                                </div>
+                                <div className="bg-pink-50 p-4 rounded-lg text-center">
+                                    <p className="font-bold">clara</p>
+                                    <p className="text-2xl my-2">→</p>
+                                    <p className="text-blue-600 font-bold">claramente</p>
+                                </div>
+                                <div className="bg-pink-50 p-4 rounded-lg text-center">
+                                    <p className="font-bold">feliz</p>
+                                    <p className="text-2xl my-2">→</p>
+                                    <p className="text-blue-600 font-bold">felizmente</p>
+                                </div>
+                                <div className="bg-pink-50 p-4 rounded-lg text-center">
+                                    <p className="font-bold">lenta</p>
+                                    <p className="text-2xl my-2">→</p>
+                                    <p className="text-blue-600 font-bold">lentamente</p>
                                 </div>
                             </div>
-                            <div className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
-                                <span className="text-3xl">📝</span>
-                                <div>
-                                    <p className="font-semibold text-lg">Identifica tus emociones</p>
-                                    <p className="text-gray-600">Reconoce lo que sientes</p>
+                            <p className="text-center text-gray-600 italic">Explicó claramente el tema</p>
+                        </div>
+                    )
+                },
+                {
+                    title: "Ejercicio Práctico",
+                    content: (
+                        <div className="space-y-6">
+                            <p className="text-xl font-semibold text-center">Identifica los adverbios:</p>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 p-5 rounded-lg">
+                                    <p className="text-lg">"María <strong className="text-blue-600">siempre</strong> llega <strong className="text-blue-600">temprano</strong>"</p>
+                                    <p className="text-sm text-gray-600 mt-2">→ siempre (tiempo), temprano (tiempo)</p>
                                 </div>
-                            </div>
-                            <div className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
-                                <span className="text-3xl">🎯</span>
-                                <div>
-                                    <p className="font-semibold text-lg">Establece metas claras</p>
-                                    <p className="text-gray-600">Divide en pasos pequeños</p>
+                                <div className="bg-gray-50 p-5 rounded-lg">
+                                    <p className="text-lg">"El perro ladra <strong className="text-green-600">mucho</strong> <strong className="text-green-600">afuera</strong>"</p>
+                                    <p className="text-sm text-gray-600 mt-2">→ mucho (cantidad), afuera (lugar)</p>
+                                </div>
+                                <div className="bg-gray-50 p-5 rounded-lg">
+                                    <p className="text-lg">"<strong className="text-purple-600">Quizás</strong> vengan <strong className="text-purple-600">mañana</strong>"</p>
+                                    <p className="text-sm text-gray-600 mt-2">→ Quizás (duda), mañana (tiempo)</p>
                                 </div>
                             </div>
                         </div>
@@ -125,9 +177,15 @@
                     title: "Recuerda",
                     content: (
                         <div className="text-center space-y-8">
-                            <div className="text-5xl">🌱</div>
-                            <p className="text-2xl text-gray-700 font-medium">La autorregulación se aprende y mejora con la práctica</p>
-                            <p className="text-xl text-gray-600">¡Sé paciente contigo mismo!</p>
+                            <div className="text-5xl">💡</div>
+                            <div className="space-y-4">
+                                <p className="text-2xl text-gray-700 font-medium">Los adverbios son INVARIABLES</p>
+                                <p className="text-xl text-gray-600">(No cambian de género ni número)</p>
+                            </div>
+                            <div className="bg-blue-50 p-6 rounded-lg">
+                                <p className="text-lg font-semibold">Pregunta clave:</p>
+                                <p className="text-gray-700 mt-2">¿Cómo? ¿Dónde? ¿Cuándo? ¿Cuánto?</p>
+                            </div>
                         </div>
                     )
                 }
